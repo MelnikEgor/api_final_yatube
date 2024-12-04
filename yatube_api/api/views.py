@@ -16,7 +16,7 @@ class FollowViewSet(
 ):
     serializer_class = FollowSerializer
     filter_backends = (filters.SearchFilter,)
-    search_fields = ['following__username',]
+    search_fields = ['following__username', ]
     permission_classes = (IsAuthenticated,)
 
     def perform_create(self, serializer):
